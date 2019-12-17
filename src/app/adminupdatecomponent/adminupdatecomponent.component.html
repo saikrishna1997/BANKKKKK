@@ -1,0 +1,275 @@
+
+ <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img style="height: 50px" src="assets/image/logo.png"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+      aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+      <!-- Links -->
+
+  <ul class="navbar-nav mr-auto text-uppercase">
+        <li class="nav-item active">
+          <a class="nav-link font-weight-normal" href="#" style="color: white">Home</a>
+        </li> 
+      </ul> 
+
+      <!-- Links -->
+      
+      <ul class="nav navbar-nav nav-flex-icons ml-auto">
+      <!--   <li class="nav-item"><a href="" class="nav-link waves-effect" style="color: white"><span class="badge red z-depth-1 mr-1"> 2 </span><i id="navbar-static-cart" alt="Cart" class="fa fa-bell"></i><span class="sr-only" > Cart </span></a></li> -->
+   <li class="nav-item d-none d-xl-inline-block" alt="Support" id="navbar-static-support">
+          <a href="" class="nav-link waves-effect" style="color: white">
+          <i class="fa fa-bell" >2</i><span class="d-none d-xl-inline-block ml-1">Notification</span>
+          </a>
+        </li>
+        <li class="nav-item d-none d-xl-inline-block" alt="Support" id="navbar-static-support">
+          <a href="" class="nav-link waves-effect" style="color: white">
+          <i class="fas fa-question-circle"></i><span class="d-none d-xl-inline-block ml-1">Help</span>
+          </a>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"><i class="fa fa-university" style="color: white"></i><span class="d-none d-xl-inline-block ml-1" style="color: white">You are in ABC Bank </span></a>
+          <div class="dropdown-menu dropdown-primary dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="adminupdatecomponent">Profile</a>
+            <a class="dropdown-item" href="login">Logout</a>
+           
+          </div>
+        </li>
+      </ul>
+
+    </div>
+    <!-- Collapsible content -->
+    </div>
+  </nav>
+  <!--/.Navbar-->
+  <br><br>
+<div class="abc">
+<div class="container my-4 py-4" >
+    <!--Section: Block Content-->
+    <section>
+
+      <div class="card">
+        <div class="card-body">
+
+          <h5 class="text-center font-weight-bold mb-4">My Profile</h5>
+
+          <hr>
+
+          <!--Grid row-->
+          <div class="row">
+
+            <!--Grid column-->
+            <div class="col-md-6 mb-4">
+
+              <table class="table">
+                 <thead>
+                  <tr>
+                  
+                   <h5 class="text-center font-weight-bold mb-4">Details</h5>
+                  </tr>
+                </thead> 
+                <tbody>
+                  <tr>
+                    <td>Employee_ID</td>
+                    <td id="cell-chrome"></td>
+                  </tr>
+                  <tr>
+                    <td>Name</td>
+                    <td id="cell-firefox"></td>
+                  </tr>
+                  <tr>
+                    <td>Date of birth</td>
+                    <td id="cell-opera"></td>
+                  </tr>
+                  <tr>
+                    <td>Phone_no</td>
+                    <td id="cell-safari"></td>
+                  </tr>
+                  <tr>
+                    <td>User_name</td>
+                    <td id="cell-edge"></td>
+                  </tr>
+                  <tr>
+                    <td>Password</td>
+                    <td id="cell-safari"></td>
+                  </tr>
+                  <tr>
+                    <td>Role</td>
+                    <td id="cell-safari"></td>
+                  </tr>
+                </tbody>
+              </table>
+<br>
+<div class="container">
+  <button type="submit" class="btn btn-info" (click)="update()"style="color:black;font-weight: bold;font-family: Times New Roman;">Update</button>
+</div>
+
+</div>
+           
+
+  <div class="col-md-6">         
+<div class="container"   *ngIf = "openform">
+  <form ngForm>
+<div  >
+<div class="container my-4">
+
+  <!-- Section -->
+  <section>
+    <div class="row d-flex justify-content-center" >
+      <!--First column-->
+    <div class="form-group form-group-lg">
+
+        <div class="md-form md-outline form-lg">
+            <label for="empId">Employee ID</label>
+         <input type="number" class="form-control" id="empId"
+         required
+         [(ngModel)]="model.empId" name="empId" #name='ngModel'placeholder="Enter a empId" class="form-control form-control-lg" readonly=""/>
+        
+        </div>
+        
+        
+        <div class="md-form md-outline form-lg">
+            <label for="Email">Name</label>
+          <input type="text"  class="form-control" id="name"
+         [(ngModel)]="model.name" name="name" placeholder="Enter Name">
+        
+        </div>
+        
+       
+        <div class="md-form md-outline form-lg">
+          <label for="DOB">Date of Birth</label>
+  <input type="Date" class="form-control" id="DOB"
+         required
+         [(ngModel)]="model.DOB" name="DOB" #name='ngModel' placeholder="Enter a Date of Birth">  
+          
+        </div>
+
+        <div class="md-form md-outline form-lg">
+ <label for="contact">Phone Number</label>
+      <input type="number" class="form-control" id="phone_num"
+         required
+         [(ngModel)]="model.phone_num" name="phone_num" #name='ngModel' placeholder="Enter Contact number">
+        
+    </div>
+<div class="md-form md-outline form-lg">
+ <label for="username">UserName</label>
+      <input type="text" class="form-control" id="username"
+         required
+         [(ngModel)]="model.username" name="username" #name='ngModel'placeholder="Enter UserName">
+         
+    </div>
+<div class="md-form md-outline form-lg">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password"
+         required
+         [(ngModel)]="model.password" name="password" #name='ngModel' placeholder="Enter Password">
+        
+    </div>
+<div class="md-form md-outline form-lg">
+    <label for="role">Role</label>
+      <input type="String" class="form-control" id="role"
+         required
+         [(ngModel)]="model.role" name="role" #name='ngModel' placeholder="Enter role">
+            
+    </div>
+    <br>
+        <button class="btn btn-block btn-primary btn-lg btn btn-success" type="submit"(click)="update()">Update</button>
+
+      </div>
+      <!--First column-->
+
+    </div>
+    <!--First row-->
+
+  </section>
+  </div>
+
+  </div>
+  <!-- Section -->
+  </form>
+</div>
+</div>
+</div>
+        </div>
+      </div>
+    </section>
+  </div>
+  <hr class="my-5">
+</div>
+
+<!--Footer-->
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+ <br>
+  <div class="container mt-5 mb-4 text-center">
+ <div class="row md-3">
+   <!-- Grid column -->
+      <div class="col-md-6 offset-md-2">
+            <h6 class="text-uppercase font-weight-bold">
+                <strong style="color:white">ABC Bank</strong>
+            </h6>
+            <hr class=" accent-2 mb-4 mt-0 d-inline-block" style="width: 60px;">
+            <p style="color:white">ABC provides a full range of services in consumer, SME and corporate banking. As a bank born and bred in Asia, ABC understands the intricacies of doing business in the region’s most dynamic markets. ABC is committed to building lasting relationships with customers, and positively impacting communities through supporting social enterprises, as it banks the Asian way.</p>
+        </div>
+      <!-- Grid column -->
+     <!--  <hr class="clearfix w-100 d-md-none pb-3"> -->
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 ">
+            <h6 class="text-uppercase font-weight-bold">
+                <strong style="color:white">Contact</strong>
+            </h6>
+            <hr class=" accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;" >
+            <p style="color:white">
+                <i class="fas fa-home  mr-3"></i> Bangalore-562110, India</p>
+            <p style="color:white">
+                <i class="fas fa-envelope mr-3"></i> www.abcbank.com</p>
+            <p style="color:white">
+                <i class="fa fa-phone mr-3"></i> 1800-2345-2345</p>
+        </div>
+      </div>
+      <!-- Grid column -->
+<div class="row md-3">
+   <div class="col-md-4 ">
+   </div>
+      <div class="col-md-4 " style="color:white" >
+         <ul class="list-unstyled d-flex justify-content-center mb-0 mt-2">
+          <li>
+            <a class="mx-3" role="button">Terms & Conditions</a>
+          </li>
+          <li>
+            <a class="mx-3" role="button">FAQs</a>
+          </li>
+           <li>
+            <a class="mx-3" role="button"><i class="fab fa-facebook-f"></i></a>
+          </li>
+          <li>
+            <a class="mx-3" role="button"><i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 ">
+   </div>
+    </div>
+
+  </div>
+
+
+</footer>
+
+<!--/.Footer-->
+
+
+
+
+
+
+
+
+
